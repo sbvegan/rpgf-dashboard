@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Main from "./components/layout/Main";
-import './App.css';
+import './App.less';
 
 const App = () => (
   <div className="App">

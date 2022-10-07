@@ -1,4 +1,4 @@
-import { Layout, Menu, Drawer } from "antd";
+import { Layout, Menu, Drawer, Button } from "antd";
 import Sidenav from "./Sidenav";
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -19,6 +19,7 @@ const Main= ({ children }:Props) => {
                 <Header />
                 <Content>
                     {children}
+                    <Button>Testing</Button>
                 </Content>
                 <Footer />
             </Layout>
