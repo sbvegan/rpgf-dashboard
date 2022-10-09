@@ -1,7 +1,7 @@
-import { Layout, Menu, Drawer, Button } from "antd";
+import { Layout, Button } from "antd";
 import Sidenav from "./Sidenav";
-
-const { Header, Content, Footer, Sider } = Layout;
+import Header from "./Header";
+const { Content, Footer, Sider } = Layout;
 
 interface Props {
     children: React.ReactNode
@@ -11,12 +11,12 @@ const Main= ({ children }:Props) => {
     console.log(children)
     return(
         <Layout>
-            <Sider>
-                <Sidenav />
-            </Sider>
+            <Header />
             <Layout>
                 {/* todo: add header */}
-                <Header />
+                <Sider>
+                    <Sidenav />
+                </Sider>
                 <Content>
                     {children}
                     <Button>Testing</Button>
@@ -28,3 +28,4 @@ const Main= ({ children }:Props) => {
 }
 
 export default Main;
+

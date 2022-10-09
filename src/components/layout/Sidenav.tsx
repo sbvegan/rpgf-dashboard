@@ -1,7 +1,5 @@
 import { Menu } from "antd";
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/logo.svg";
+import { Link } from "react-router-dom";
 
 const items = [
     { 
@@ -46,10 +44,6 @@ const Sidenav = () => {
 
     return (
         <>
-            <div style={{height: "64px"}}>
-                {/* <img src={logo} alt="logo" /> */}
-                <span style={{color:"white"}}>RPGF Dashboard</span>
-            </div>
             <Menu items={items} />
         </>
     )
