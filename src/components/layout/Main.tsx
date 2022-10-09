@@ -13,13 +13,11 @@ const Main= ({ children }:Props) => {
         <Layout>
             <Header />
             <Layout>
-                {/* todo: add header */}
-                <Sider>
+                <Sider width={"288px"}>
                     <Sidenav />
                 </Sider>
                 <Content>
                     {children}
-                    <Button>Testing</Button>
                 </Content>
                 <Footer />
             </Layout>

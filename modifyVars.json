@@ -1,6 +1,8 @@
 {
     "@font-family": "Open Sans, sans-serif",
-    "@component-background": "#f8f8f8",
-    "@layout-header-background": "#fafafa",
-    "@layout-header-height": "3.6rem"
+    "@component-background": "#F1F4F9",
+    "@layout-header-background": "#FAFAFA",
+    "@layout-header-height": "3.6rem",
+    "@menu-highlight-color": "@text-color",
+    "@menu-item-active-bg": "#FFDBDF"
 }

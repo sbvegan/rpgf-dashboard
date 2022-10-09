@@ -1,50 +1,43 @@
+import type { MenuProps } from 'antd';
 import { Menu } from "antd";
+import React from "react";
 import { Link } from "react-router-dom";
 
-const items = [
-    { 
-        path: "/",
-        label: 'item 1',
-        // icon        
-    }, 
-    { 
-        path: "/2",
-        label: 'item 2',
-        // icon        
-    }, 
-    { 
-        path: "/3",
-        label: 'item 3',
-        // icon        
-    }, 
-    { 
-        path: "/4",
-        label: 'item 4',
-        // icon        
-    }, 
-    { 
-        path: "/5",
-        label: 'item 5',
-        // icon        
-    }, 
-    { 
-        path: "/",
-        label: 'item 6',
-        // icon        
-    }, 
-].map((item, index) => {
+type MenuItem = Required<MenuProps>["items"][number];
+
+const getItem = (
+    label: React.ReactNode,
+    key: React.Key,
+    icon?: React.ReactNode,
+    children?: MenuItem[],
+    type?: "group"
+): MenuItem => { 
     return {
-        key: index,
-        label: <Link to={item.path}>{item.label}</Link>
-        // icon: item.icon
-    }
-});
+        key,
+        icon,
+        children,
+        label,
+        type,
+    } as MenuItem;
+}
+
+const items: MenuProps["items"] = [
+    getItem('Retroactive Public Goods Funding', '1'),
+    getItem('Analytics Dashboard', '2'),
+    getItem('Funding Rounds Breakdown', '3'),
+    getItem('Help Us Improve', '4'),
+];
 
 const Sidenav = () => {
 
     return (
         <>
-            <Menu items={items} />
+            <Menu 
+                style={{
+                    "wordWrap": "break-word"
+                }}
+                items={items} 
+            />
         </>
     )
 }
