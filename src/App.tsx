@@ -1,13 +1,17 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import Home from "./pages/Home";
 import Main from "./components/layout/Main";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import FundingRounds from "./pages/FundingRounds";
 import './App.less';
 
 const App = () => (
   <div className="App">
     <Routes>
-        <Route path="/" element={<Main><Home/></Main>} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/rpgf" element={<Main><Home/></Main>} />
+        <Route path="/dashboard" element={<Main><Dashboard/></Main>} />
+        <Route path="/funding-rounds" element={<Main><FundingRounds/></Main>} />
+        <Route path="*" element={<Navigate to="/rpgf" replace />} />
     </Routes>
   </div>
 );

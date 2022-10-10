@@ -22,20 +22,17 @@ const getItem = (
 }
 
 const items: MenuProps["items"] = [
-    getItem('Retroactive Public Goods Funding', '1'),
-    getItem('Analytics Dashboard', '2'),
-    getItem('Funding Rounds Breakdown', '3'),
-    getItem('Help Us Improve', '4'),
+    getItem(<Link to="/rpgf">Retroactive Public Goods Funding</Link>, '1'),
+    getItem(<Link to="/dashboard">Analytics Dashboard</Link>, '2'),
+    getItem(<Link to="/funding-rounds">Funding Rounds Breakdown</Link>, '3')
 ];
 
 const Sidenav = () => {
 
     return (
         <>
-            <Menu 
-                style={{
-                    "wordWrap": "break-word"
-                }}
+            <Menu
+                defaultSelectedKeys={['1']}
                 items={items} 
             />
         </>

@@ -10,7 +10,7 @@ interface Props {
 const Main= ({ children }:Props) => {
     console.log(children)
     return(
-        <Layout>
+        <Layout className="layout">
             <Header />
             <Layout>
                 <Sider width={"288px"}>
@@ -19,7 +19,6 @@ const Main= ({ children }:Props) => {
                 <Content>
                     {children}
                 </Content>
-                <Footer />
             </Layout>
         </Layout>
     );

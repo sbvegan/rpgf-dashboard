@@ -16,6 +16,7 @@ const Header = () => {
             </Text>
             
             <Menu theme="dark" mode="horizontal" />
+            {/* todo: add external links in the header menu */}
         </AntHeader>
     );
 }
